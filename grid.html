@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Grid System</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+	.pink{
+		background-color: pink;
+		border: 1px solid purple;
+	}
+	.orange{
+		background-color: orange;
+		border: 1px dashed red;
+		height: 50px;
+	}
+
+</style>
+<body>
+
+	<!-- bootstrap grid needs to be inside a container -->
+	<div class="container">
+		
+		<!-- grids are broken down in 12 columns across page/container and group content by setting a number of columns-->
+		<!-- must be contained in div with row class -->
+<!-- 		<div class="row"> -->
+			<!-- nesting grids; when page is full/large size, each element will be 1 column; when we make page smaller, each
+			element will be 2 columns (2 rows, 6 elements across) -->
+			<!-- if we don't specify what happens when we make page smaller, each element will have its own row with size of 12 columns-->
+<!-- 			<div class="col-lg-1 col-md-2 pink">Column Large 1</div>
+			<div class="col-lg-1 col-md-2 pink">Column Large 1</div>
+			<div class="col-lg-1 col-md-2 pink">Column Large 1</div>
+			<div class="col-lg-1 col-md-2 pink">Column Large 1</div>
+			<div class="col-lg-1 col-md-2 pink">Column Large 1</div>
+			<div class="col-lg-1 col-md-2 pink">Column Large 1</div>
+			<div class="col-lg-1 col-md-2 pink">Column Large 1</div>
+			<div class="col-lg-1 col-md-2 pink">Column Large 1</div>
+			<div class="col-lg-1 col-md-2 pink">Column Large 1</div>
+			<div class="col-lg-1 col-md-2 pink">Column Large 1</div>
+			<div class="col-lg-1 col-md-2 pink">Column Large 1</div>
+			<div class="col-lg-1 col-md-2 pink">Column Large 1</div> -->
+<!-- 		</div> -->
+		<div class="row">
+			<!-- below is redundant; can just start with col-md-3 and it will automatically know to set lg to 3 columns too when 
+			we set md window to 3 i.e. class="col-md-3 col-sm-6 pink"-->
+			<div class='col-lg-3 col-md-3 col-sm-6 pink'>Tour Date!</div>
+			<div class='col-lg-3 col-md-3 col-sm-6 pink'>Tour Date!</div>
+			<div class='col-lg-3 col-md-3 col-sm-6 pink'>Tour Date!</div>
+			<div class='col-lg-3 col-md-3 col-sm-6 pink'>
+				<!-- splits this parent column into 12 columns -->
+				<div class="row">
+					<div class="col-lg-6 orange">Halfway</div>
+					<div class="col-lg-6 orange">Otherhalf</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

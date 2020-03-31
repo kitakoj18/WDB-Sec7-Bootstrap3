@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Gallery</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="gallery.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<!-- want to constrict content inside navbar, not entire navbar itself or else navbar won't go across entire page -->
+		<div class="container">
+			<!-- different styling than nav navbar-nav class -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			     </button>
+				<a href="#" class="navbar-brand"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Photos</a>
+			</div>
+
+			<!-- documentation has this inside div tag but ul will work as well and better convention with li tags -->
+			<ul class="nav navbar-nav">
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<!-- taken from default nav bootstrap -->
+			<!-- anything inside this div tag will collapse down when we size down window -->
+			<!-- id needs to be the same as data-target in class="navbar-toggle collapsed", but does not need to include # -->
+			<!-- when collapse, About and Contact buttons won't collapse into dropdown list button -->
+			<div class="collapse navbar-collapse" id="bs-nav-demo">
+				<!-- will put links at the right of the navbar, but goes to very right of page so that is why we have container -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Sign Up</a></li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+
+		<div class="jumbotron">
+			<h1><span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Image Gallery</h1>
+			<p>Some beautiful images from Splash</p>
+		</div>
+
+		<!-- flex class fixes format so pictures stay on same row; look at css file -->
+		<div class="row flex">
+			<div class="col-lg-4 col-sm-6">
+				<!-- div tag with thumbnail class will resize picture and put in frame so large pictures don't overlap -->
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/xgMLOaMytUc">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/cAbF9dt_5lc">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/G21-GaAZrrs">
+				</div>	
+			</div>
+			<!-- do not need multiple rows; will automatically wrap next row -->
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/I4TUNyn55oE">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/TlJNYnCdpAE">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/a1IOI9aMx7s">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
